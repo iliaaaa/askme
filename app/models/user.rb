@@ -6,8 +6,8 @@ class User < ApplicationRecord
 
   has_many :questions
 
-  validates :email, :username, presence:true
-  validates :email, :username, uniqueness:true
+  validates :email, :username, presence: true
+  validates :email, :username, uniqueness: true
   # Добавляем валидаюцию с гемом email_validator
   validates :email, email: true
   # Валидация на длинну юзернейма
