@@ -8,6 +8,12 @@ class User < ApplicationRecord
 
   validates :email, :username, presence:true
   validates :email, :username, uniqueness:true
+ # Добавляем валидаюцию с гемом email_validator
+  validates :email, email: true
+# Валидация на длинну юзернейма
+  validates :username, length: { in: 3..40 }
+# Валидация юзернейма на допустимые символы
+  validates :username, format: { with: /\A[a-zA-Z0-9_]+\Z/ }
 
   attr_accessor :password
 
