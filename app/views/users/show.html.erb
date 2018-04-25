@@ -1,4 +1,7 @@
-<h1>
-  <%= @hello %>
+<h1 class="main-title"><%= @user.name %></h1>
+<div>
+  <%= image_tag user_avatar(@user), alt: 'Фото' %>
+</div>
+<h2 class="medium-title">@<%= @user.username %></h2>
 
-</h1>
+<a href="#" class="button">Задать вопрос</a>
