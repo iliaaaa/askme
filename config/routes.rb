@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   #Надо вспомнить, что это значит...
   resources :users
+  resources :questions
 
   root 'users#index'
 
